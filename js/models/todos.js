@@ -1,9 +1,8 @@
-TodoList.Todo.reopenClass({
-  FIXTURES: [
+TodoList.Todo.FIXTURES = [
     {
       id: '1',
       title: 'Learn Ember.js',
-      isCompleted: false
+      isCompleted: true
     },
     {
       id: '2',
@@ -16,4 +15,4 @@ TodoList.Todo.reopenClass({
       isCompleted: false
     }
   ]
-});
+
