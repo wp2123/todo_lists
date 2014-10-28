@@ -1,0 +1,1 @@
+TodoList = Ember.Application.create({});
