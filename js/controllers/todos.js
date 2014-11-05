@@ -22,6 +22,11 @@ TodoList.TodosController = Ember.ArrayController.extend({
             this.set('newTitle');
 
             todo.save();
+        },
+        complete: function (todo) {
+            console.log("I'm in complete");
+            todo.isCompleted = !todo.isCompleted;
+            todo.save();
         }
     }
 });
