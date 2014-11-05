@@ -15,7 +15,7 @@
 	    <section id="todoapp">
 	      <header id="header">
 		<h1>todos</h1>
-		<input type="text" id="new-todo" placeholder="What needs to be done?" />
+        {{input type="text" id="new-todo" placeholder="What needs to be done?" action='createTodo' value=newTitle}}
 	      </header>
 
 	      <section id="main">
@@ -62,7 +62,6 @@
     <script src='js/router.js'></script>
     <script src='js/controllers/todos.js'></script>
     <script src='js/models/todo.js'></script>
-    <script src='js/models/todos.js'></script>
     <script src='js/routes/todos.js'></script>
   </body>
 </html>
