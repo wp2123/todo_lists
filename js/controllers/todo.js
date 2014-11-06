@@ -28,6 +28,9 @@ TodoList.TodoController = Ember.ObjectController.extend({
             todo.save();
 
             this.set('isEdit', false);
+        },
+        destroyTodo: function () {
+            this.model.deleteRecord();
         }
     }
 });
