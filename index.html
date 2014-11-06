@@ -8,6 +8,7 @@
     <script src='libs/js/handlebars-v1.3.0.js'></script>
     <script src='http://builds.emberjs.com/tags/v1.7.0/ember.js'></script>
     <script src='http://builds.emberjs.com/tags/v1.0.0-beta.11/ember-data.js'></script>
+    <script type='text/javascript' src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
   </head>
   <body>
 
@@ -33,7 +34,7 @@
 
 	      <footer id="footer">
             <span id="todo-count">
-              <strong>2</strong> todos left
+              <strong>{{incompletedNumber}}</strong> todos left
             </span>
             <ul id="filters">
               <li>
