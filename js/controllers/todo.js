@@ -1,11 +1,9 @@
 TodoList.TodoController = Ember.ObjectController.extend({
     isCompleted: function(key, value) {
-        console.log(value);
-        console.log(key);
         var todo = this.get('model');
 
         if(value === undefined) {
-            return todo.isCompleted;
+            return todo.get('isCompleted');
         } else {
             todo.set('isCompleted', value);
             todo.save();

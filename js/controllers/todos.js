@@ -4,7 +4,6 @@ TodoList.TodosController = Ember.ArrayController.extend({
 
     actions: {
         createTodo: function () {
-            console.log("I'm creating Toto");
             var title = this.get('newTitle');
 
             if(!title) {
@@ -24,7 +23,6 @@ TodoList.TodosController = Ember.ArrayController.extend({
             todo.save();
         },
         complete: function (todo) {
-            console.log("I'm in complete");
             todo.isCompleted = !todo.isCompleted;
             todo.save();
         }
