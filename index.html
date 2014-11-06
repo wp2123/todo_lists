@@ -22,9 +22,13 @@
 	      <section id="main">
             <ul id="todo-list">
                 {{#each itemController='todo'}}
-                  <li {{bind-attr class="isCompleted:completed"}}>
-                    {{input type="checkbox" checked=isCompleted class="toggle" }}
-                    <label>{{title}}</label><button class="destroy"></button>
+                  <li {{bind-attr class="isCompleted:completed"}} {{action 'setEdit' on='doubleClick'}}>
+                    {{#if isEdit}}
+                        <input>
+                    {{else}}
+                        {{input type="checkbox" checked=isCompleted class="toggle" }}
+                        <label>{{title}}</label><button class="destroy"></button>
+                    {{/if}}
                   </li>
                 {{/each}}
             </ul>

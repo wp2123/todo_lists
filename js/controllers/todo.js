@@ -1,4 +1,7 @@
 TodoList.TodoController = Ember.ObjectController.extend({
+
+    isEdit: false,
+
     isCompleted: function(key, value) {
         var todo = this.get('model');
 
@@ -10,5 +13,12 @@ TodoList.TodoController = Ember.ObjectController.extend({
 
             return value;
         }
-    }.property('model.isCompleted')
+    }.property('model.isCompleted'),
+
+    actions: {
+        setEdit: function () {
+            var is_edit = this.get('isEdit');
+            this.set('isEdit', !is_edit);
+        }
+    }
 });
